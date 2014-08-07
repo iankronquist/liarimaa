@@ -1,0 +1,17 @@
+{
+  "name": "liarimaa",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Ian Kronquist",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.7.4",
+    "gulp": "^3.8.7",
+    "jshint": "^2.5.2",
+    "mocha": "^1.21.3"
+  }
+}
