@@ -1,7 +1,10 @@
+var nunjucks = require('nunjucks');
+
 module.exports = function(app) {
 
 	app.get('/play', function (req, res) {
-		res.render('play', { });
+
+		return nunjucks.render('play.html', function (err, res) { });
 	});
 
 }
