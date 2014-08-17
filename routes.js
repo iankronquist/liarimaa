@@ -2,9 +2,9 @@ var nunjucks = require('nunjucks');
 
 module.exports = function(app) {
 
-	app.get('/play', function (req, res) {
+	app.get('/', function (req, res) {
 
-		return nunjucks.render('play.html', function (err, res) { });
+		return res.render('play.html', {});
 	});
 
-}
+};
