@@ -1,12 +1,14 @@
 "use strict"
-
-var express = require('express');
-var app = express();
+var nunjucks  = require('nunjucks');
+var express   = require('express');
+var app       = express();
 var routes = require('./routes')(app);
-var nunjucks = require('nunjucks');
-nunjucks.configure('/views');
 
+app.use(express.static(__dirname + '/static'));
 
-var server = app.listen(process.env.APP_PORT, function() {
-  console.log('Listening on http://0.0.0.0:%d', server.address().port);
+nunjucks.configure('views', {
+  autoescape: true,
+  express   : app
 });
+
+app.listen(process.env.Port || 8000);
