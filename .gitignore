@@ -1,0 +1,4 @@
+static/bundle.min.js
+
+*.swp
+node_modules
