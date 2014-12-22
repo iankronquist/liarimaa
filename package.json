@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "start": "node app.js"
+    "start": "node app.js",
+	"lint": "jshint **.js",
+	"build:browserify": "browserify app.js > static/bundle.min.js"
   },
   "author": "Ian Kronquist",
   "license": "MIT",
   "dependencies": {
+    "arimaa": "git+ssh://git@github.com:iankronquist/arimaa.git",
     "express": "^4.7.4",
-    "gulp": "^3.8.7",
-    "jshint": "^2.5.2",
-    "mocha": "^1.21.3",
     "nunjucks": "^1.1.0"
-  }
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "mocha": "^1.21.3"
+  },
 }
